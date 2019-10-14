@@ -1,6 +1,6 @@
 {
   "name": "AWS S3 Sync",
-  "version": "1.03",
+  "version": "1.04",
   "slug": "aws_s3_sync",
   "description": "Copies Hassio backups to AWS S3 bucket",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],

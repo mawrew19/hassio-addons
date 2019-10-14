@@ -51,7 +51,8 @@ while read -r msg; do
 		    ~/.local/bin/aws s3 rm s3://$BUCKETNAME/$fileName --quiet
           fi
 		done
-		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Cleanup processing of S3 complete"
+		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Completed Cleanup of S3"
+		echo `date "+%Y-%m-%d %H:%M:%S"` "------------------------------------------------------------"
     else
         # received undefined command
         echo `date "+%Y-%m-%d %H:%M:%S"` "[Error] Command not found: ${cmd}"
