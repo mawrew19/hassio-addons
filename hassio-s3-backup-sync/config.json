@@ -1,0 +1,25 @@
+{
+  "name": "AWS S3 Sync",
+  "version": "1.03",
+  "slug": "aws_s3_sync",
+  "description": "Copies Hassio backups to AWS S3 bucket",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "stdin": true,
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "manager",
+  "map": ["backup:rw", "share"],
+  "options": {
+      "AWSAccessKey":"Enter your AWS Access Key",
+	  "AWSSecret":"The Secret for the access Key",
+	  "BucketName":"S3 Bucket Name",
+	  "RetainFiles":5
+	  },
+  "schema": {
+      "AWSAccessKey": "str",
+	  "AWSSecret": "str",
+	  "BucketName": "str",
+	  "RetainFiles": "int"
+	  }
+}
