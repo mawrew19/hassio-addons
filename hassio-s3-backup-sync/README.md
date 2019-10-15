@@ -10,8 +10,11 @@ To get this to work you will need an AWS account (free) and you will need to set
 Additionally, you will need to setup a user in AWS IAM which has access to your new S3 bucket. This bucket should NOT be made public.
 
   "AWSAccessKey": - The access key for the AWS IAM user
+  
   "AWSSecret":  - The "secret" key for the AWS IAM user
+  
   "BucketName": - The name of the S3 bucket
+  
   "RetainFiles": - How many files to retain
 
   This addon will remove all but the latest number of files as defined by the RetainFiles value on both the local container as well as in the S3 bucket.
