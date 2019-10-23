@@ -9,7 +9,7 @@ RETAIN=$(jq --raw-output ".RetainFiles" $CONFIG_PATH)
 
 mkdir ~/.aws
 cat << EOF > ~/.aws/credentials
- [default]
+[default]
 aws_access_key_id = $AWSACCESSKEY
 aws_secret_access_key = $AWSSECRET
 EOF
