@@ -9,6 +9,6 @@ RUN apk add --no-cache jq curl findutils python unzip  && \
     ./awscli-bundle/install -b ~/bin/aws
 # Copy data for add-on
 COPY run.sh /
-RUN chmod a+x /run.sh
+RUN ["chmod", "a+x", "/run.sh"]
 
 CMD [ "/run.sh" ]
