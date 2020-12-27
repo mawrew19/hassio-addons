@@ -38,7 +38,7 @@ while read -r msg; do
          fi
 		
         echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Copying files in /backup to S3 bucket: ${BUCKETNAME}"
-        aws-cli s3 sync /backup s3://${BUCKETNAME} --quiet
+         s3 sync /backup s3://${BUCKETNAME} --quiet
 		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Copy complete"
 		echo `date "+%Y-%m-%d %H:%M:%S"` "--------"
 		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Cleaning up older files in S3 bucket: ${BUCKETNAME}"
