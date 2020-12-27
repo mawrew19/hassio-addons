@@ -21,5 +21,6 @@
 	  "AWSSecret": "str",
 	  "BucketName": "str",
 	  "RetainFiles": "int"
-	  }
+	  },
+  "image": "homeassistant/amd64-base"
 }
