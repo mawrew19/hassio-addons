@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache jq curl findutils unzip awscli
+RUN apk add --no-cache jq curl findutils unzip aws-cli
     # && \
     # curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" && \
     # unzip awscli-bundle.zip && \
