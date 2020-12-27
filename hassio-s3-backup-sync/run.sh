@@ -38,17 +38,17 @@ while read -r msg; do
          fi
 		
         echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Copying files in /backup to S3 bucket: ${BUCKETNAME}"
-        ~/bin/aws s3 sync /backup s3://${BUCKETNAME} --quiet
+        aws s3 sync /backup s3://${BUCKETNAME} --quiet
 		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Copy complete"
 		echo `date "+%Y-%m-%d %H:%M:%S"` "--------"
 		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Cleaning up older files in S3 bucket: ${BUCKETNAME}"
-		~/bin/aws s3 ls s3://${BUCKETNAME} | sort -r | awk "NR>${RETAIN}" | while read -r line;
+		aws s3 ls s3://${BUCKETNAME} | sort -r | awk "NR>${RETAIN}" | while read -r line;
    		do 
 		  fileName=`echo $line|awk {'print $4'}`;
 		  if [[ $fileName != "" ]]
           then
             echo "  Removing $fileName"
-		    ~/bin/aws s3 rm s3://$BUCKETNAME/$fileName --quiet
+		    aws s3 rm s3://$BUCKETNAME/$fileName --quiet
           fi
 		done
 		echo `date "+%Y-%m-%d %H:%M:%S"` "[Info] Completed Cleanup of S3"
