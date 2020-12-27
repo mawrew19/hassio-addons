@@ -1,4 +1,5 @@
-ARG BUILD_FROM=amazon/aws-cli
+ARG BUILD_FROM
+#=amazon/aws-cli
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
